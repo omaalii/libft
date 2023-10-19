@@ -28,8 +28,16 @@ LIBC = 	ft_bzero.c   \
 		ft_tolower.c \
 		ft_toupper.c \
 		ft_memset.c \
+		ft_memcpy.c \
+		ft_strlcpy.c \
 		ft_isdigit.c 
-		
+
+# ft_strlcat
+# ft_memmove
+# ft_strlcat
+# ft_memcmp.c
+# ft_memmove
+
 
 SRCS = 		${LIBC}
 
@@ -46,7 +54,7 @@ $(NAME):	${OBJS}
 all: 		${NAME}
 
 clean:
-			rm -f ${OBJSALL}
+			rm -f ${OBJS}
 
 fclean:	clean;
 			rm -f ${NAME}

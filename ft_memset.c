@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 18:33:41 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/01 18:33:41 by omaali           ###   ########.fr       */
+/*   Created: 2023/10/17 22:16:11 by omaali            #+#    #+#             */
+/*   Updated: 2023/10/17 22:16:11 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s1, int c)
+void	*ft_memset(void *str, int value, size_t len)
 {
-    int    i;
-    int     len;
+	size_t	i;
+	char	*ptr;
 
-    i = 0;
-    len = ft_strlen(s1);
-    while (i <= len)
-    {
-        if (s1[i] == (char)c)
-            return ((char *)&s1[i]);
-        i++;
-    }
-    return (0);
+	ptr = str;
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = (unsigned char)value;
+		i++;
+	}
+	return (str);
 }
-// int main()
-// {
-//  char *s;
-//  int  c;
-//  s = "hola-teo";
-//  c = 'a';
-//  printf("%s\n", ft_strchr(s, c));
-//     return (0);
-// }

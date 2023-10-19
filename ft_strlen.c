@@ -22,10 +22,9 @@ size_t ft_strlen(const char *s)
     return (i);
     
 }
-/* int main()
-{
-   char s[50] = "GEEK";
-    printf ("%s is the length. \n", ft_strlen(s))
-    return (0);
-}
-/*
+// int main()
+// {
+//    char s[50] = "GEEK";
+//     printf ("%s is the length. \n", ft_strlen(s))
+//     return (0);
+// }
