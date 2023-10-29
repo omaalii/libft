@@ -6,7 +6,7 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:35:59 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/24 23:35:59 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/27 11:25:17 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ static void	free_split(char **s, int i)
 	free(s);
 }
 
-static int	memory(int filas, char **matriz, char *s, char c)
+static int	memory(int rows, char **matrix, char *s, char c)
 {
 	int	len;
 	int	i;
 
 	i = 0;
-	while (i < filas)
+	while (i < rows)
 	{
 		len = 0;
 		while (*s == c && *s)
@@ -59,10 +59,10 @@ static int	memory(int filas, char **matriz, char *s, char c)
 			if (*s == '\0' || *s == c)
 				break ;
 		}
-		matriz[i] = (char *)ft_calloc(len + 1, sizeof(char));
-		if (!matriz[i])
+		matrix[i] = (char *)ft_calloc(len + 1, sizeof(char));
+		if (!matrix[i])
 		{
-			free_split(matriz, filas);
+			free_split(matrix, rows);
 			return (-1);
 		}
 		i++;
@@ -70,40 +70,40 @@ static int	memory(int filas, char **matriz, char *s, char c)
 	return (0);
 }
 
-static char	**fill(int filas, char **matriz, char *copy_s, char c)
+static char	**fill(int rows, char **matrix, char *copy_s, char c)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while (i < filas)
+	while (i < rows)
 	{
 		while (*copy_s == c && *copy_s)
 			copy_s++;
 		while (*copy_s != c && *copy_s)
-			matriz[i][j++] = *copy_s++;
+			matrix[i][j++] = *copy_s++;
 		j = 0;
 		i++;
 	}
-	return (matriz);
+	return (matrix);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		filas;
+	int		rows;
 	char	*copy_s;
-	char	**matriz;
+	char	**matrix;
 
 	if (!s)
 		return (0);
-	filas = ft_char_counter(s, c);
+	rows = ft_char_counter(s, c);
 	copy_s = (char *)s;
-	matriz = (char **)ft_calloc(filas + 1, sizeof(char *));
-	if (!matriz)
+	matrix = (char **)ft_calloc(rows + 1, sizeof(char *));
+	if (!matrix)
 		return (0);
-	if (memory(filas, matriz, (char *)s, c) == -1)
+	if (memory(rows, matrix, (char *)s, c) == -1)
 		return (0);
-	matriz = fill(filas, matriz, (char *)copy_s, c);
-	return (matriz);
+	matrix = fill(rows, matrix, (char *)copy_s, c);
+	return (matrix);
 }

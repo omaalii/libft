@@ -6,13 +6,13 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 20:35:03 by omaali            #+#    #+#             */
-/*   Updated: 2023/09/26 20:35:03 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/26 16:39:45 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

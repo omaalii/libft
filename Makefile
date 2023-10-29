@@ -6,15 +6,13 @@
 #    By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 20:39:21 by omaali            #+#    #+#              #
-#    Updated: 2023/10/03 20:39:21 by omaali           ###   ########.fr        #
+#    Updated: 2023/10/26 18:55:56 by omaali           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = libft.a
-
-NAME = libft.a
-
+HEADER = libft.h
 LIBC =	ft_atoi.c	 \
 		ft_bzero.c   \
 		ft_calloc.c  \
@@ -37,19 +35,18 @@ LIBC =	ft_atoi.c	 \
 		ft_strlcat.c \
 		ft_isprint.c \
 		ft_isdigit.c \
-		ft_strlcpy.c 
-
-ADDITIONAL = ft_substr.c 		\
-			 ft_strjoin.c 		\
-			 ft_strmapi.c 		\
-             ft_striteri.c 		\
-			 ft_putchar_fd.c 	\
-			 ft_strtrim.c       \
-			 ft_putstr_fd.c 	\
-			 ft_putendl_fd.c	\
-			 ft_putnbr_fd.c 	\
-			 ft_itoa.c			\
-			 ft_split.c
+		ft_strlcpy.c \
+		ft_substr.c 	\
+		ft_strjoin.c 	\
+		ft_strmapi.c 	\
+        ft_striteri.c 	\
+		ft_putchar_fd.c \
+		ft_strtrim.c    \
+		ft_putstr_fd.c 	\
+		ft_putendl_fd.c	\
+		ft_putnbr_fd.c 	\
+		ft_itoa.c		\
+		ft_split.c
 
 
 SRCS = 		${LIBC}
@@ -58,7 +55,7 @@ OBJS = 		${SRCS:.c=.o}
 
 FLAGS = 	-Wall -Werror -Wextra
 
-%.o:%.c		Makefile libft.h 
+%.o:%.c		  $(HEADER)
 			gcc $(CFLAGS) -I ./ -c $< -o $@
 
 $(NAME):	${OBJS}

@@ -6,7 +6,7 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:36:13 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/24 23:36:13 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/27 11:51:44 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,8 @@ char	*ft_itoa(int nb)
 	int		len;
 
 	len = ft_len_int(nb);
-	if (nb <= -2147483648)
+	if (nb == -2147483648)
 		return (ft_strdup("-2147483648"));
-	else if (nb >= 2147483647)
-		return (ft_strdup("2147483647"));
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (0);

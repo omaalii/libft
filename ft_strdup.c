@@ -6,15 +6,15 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:48:15 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/24 20:48:15 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/26 17:28:59 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    char	*memory;
+	char	*memory;
 	int		i;
 
 	i = -1;

@@ -6,17 +6,16 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:31:29 by omaali            #+#    #+#             */
-/*   Updated: 2023/09/22 22:17:51 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/26 16:38:51 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-    return (1);
-else
-    return (0);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }
-

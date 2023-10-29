@@ -6,19 +6,18 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 20:50:42 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/02 20:50:42 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:11:37 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t	i;
+	char	*cast;
 
 	i = 0;
-	char *cast;
-
 	cast = (char *)s;
 	while (i < n)
 	{

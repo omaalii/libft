@@ -6,15 +6,15 @@
 /*   By: omaali <omaali@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:16:35 by omaali            #+#    #+#             */
-/*   Updated: 2023/10/24 23:16:35 by omaali           ###   ########.fr       */
+/*   Updated: 2023/10/26 18:58:47 by omaali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char	*sub;
+	char	*sub;
 	size_t	i;
 
 	i = 0;
@@ -29,5 +29,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	while (i < len && s[start])
 		sub[i++] = s[start++];
-	return ((char *)sub);   
+	return ((char *)sub);
 }
